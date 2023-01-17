@@ -1,0 +1,124 @@
+CRIME MANAGEMENT SYSTEM-DATABASE
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+DATABASE
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE DATABASE crimetest;
+CREATE DATABASE crimefinal;
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+TABLES
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Table Name: Registration
+
+
+CREATE TABLE Registration(
+regid INT NOT NULL AUTO_INCREMENT,
+pennumber INT(6) NOT NULL,
+gender VARCHAR(10) NOT NULL,
+email VARCHAR(75) NOT NULL,
+phonenumber INT(10) NOT NULL,
+address VARCHAR(1000) NOT NULL,
+PASSWORD VARCHAR(12) NOT NULL,
+cpassword VARCHAR (12) NOT NULL,
+PRIMARY KEY (regid));
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Table Name:ComplaintDetails
+
+
+CREATE TABLE ComplaintDetails(
+cdid INT NOT NULL AUTO_INCREMENT,
+petitionername VARCHAR (85) NOT NULL,
+gender VARCHAR(10) NOT NULL,
+dateofbirth INT(20) NOT NULL,
+address VARCHAR (1000) NOT NULL,
+complaintdetails VARCHAR (1000) NOT NULL,
+dateofcomplaint INT(20) NOT NULL,
+image BLOB NOT NULL,
+phonenumber INT (10) NOT NULL,
+occupation VARCHAR (75) NOT NULL,
+PRIMARY KEY(cdid));
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Table Name:FirDetails
+
+
+CREATE TABLE FirDetails(
+fdid INT NOT NULL AUTO_INCREMENT,
+firregisrationnumber INT(10) NOT NULL,
+yearofregistration INT(20) NOT NULL,
+policedistrict VARCHAR(1000) NOT NULL,
+policestationname VARCHAR(1000)NOT NULL,
+PRIMARY KEY(fdid));
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Table Name:CriminalRegistration
+
+
+CREATE TABLE CriminalRegistration(
+crid INT NOT NULL AUTO_INCREMENT,
+fullname VARCHAR (75) NOT NULL,
+nationality VARCHAR (75)NOT NULL,
+gender VARCHAR (15) NOT NULL,
+dateofbirth INT(20) NOT NULL,
+residentaddress VARCHAR (1000) NOT NULL,
+occupation VARCHAR(75) NOT NULL,
+firid VARCHAR(10) NOT NULL,
+crimetype VARCHAR(1000) NOT NULL,
+image BLOB NOT NULL,
+jailterm INT(75) NOT NULL,
+mostwanted VARCHAR(15) NOT NULL,
+PRIMARY KEY(crid));
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+Table Name:postmortumdetails
+
+CREATE TABLE postmortumdetails(
+pmdid INT NOT NULL AUTO_INCREMENT,
+fullname VARCHAR (75) NOT NULL,
+image BLOB NOT NULL,
+gender VARCHAR(15) NOT NULL,
+dateofbirth INT (20) NOT NULL,
+idproofimage BLOB NOT NULL,
+residentaddress VARCHAR(1000) NOT NULL,
+firid INT(10)NOT NULL,
+postmortumreportimage BLOB NOT NULL,
+dateofpostmortum INT (20)NOT NULL,
+doctorsname VARCHAR(75)NOT NULL,
+hospitaladdress VARCHAR(1000)NOT NULL,
+descriptionofcase VARCHAR(1000)NOT NULL,
+PRIMARY KEY(pmdid));
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
